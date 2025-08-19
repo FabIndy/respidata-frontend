@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎯 Styles personnalisés pour les curseurs de sliders */
+input[type="range"]::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #0d9488; /* teal-600 */
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #0d9488;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
