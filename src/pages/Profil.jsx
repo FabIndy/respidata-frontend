@@ -5,9 +5,9 @@ export default function Profil() {
   const navigate = useNavigate();
   const profils = [
     "Standard",
-    "Standard asthmatique",
-    "Sportif",
-    "Sportif asthmatique"
+    "Standard with Asthma",
+    "Active",
+    "Active with Asthma"
   ];
 
   const [profil, setProfil] = useState(localStorage.getItem("profil") || "");
@@ -16,9 +16,9 @@ export default function Profil() {
     if (profil) {
       const profilsValidés = [
         "Standard",
-        "Standard asthmatique",
-        "Sportif",
-        "Sportif asthmatique"
+        "Standard with Asthma",
+        "Active",
+        "Active with Asthma"
       ];
       const profilFinal = profilsValidés.includes(profil) ? profil : "Standard";
       localStorage.setItem("profil", profilFinal);
@@ -55,7 +55,7 @@ export default function Profil() {
             : "bg-gray-300 text-gray-500 cursor-not-allowed"
         }`}
       >
-        Valider mon profil
+        Confirm
       </button>
     </div>
   );

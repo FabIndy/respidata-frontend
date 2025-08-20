@@ -14,15 +14,15 @@ export default function NiveauSonore() {
   };
 
   const getNoiseMessage = (n) => {
-    if (n <= 2) return "Environnement très calme, propice au repos.";
-    if (n <= 6) return "Bruit modéré, ambiance généralement acceptable.";
-    return "Niveau sonore élevé, attention à l’exposition prolongée.";
+    if (n <= 2) return "Very quiet environment, ideal for rest.";
+    if (n <= 6) return "Moderate noise, generally acceptable environment.";
+    return "High noise level, be cautious with prolonged exposure.";
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-white">
       <h1 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
-        Quel est le niveau sonore autour de vous ?
+        How noisy is your environment ?
       </h1>
 
       <div className="w-full max-w-md flex flex-col items-center gap-y-6">
@@ -46,14 +46,14 @@ export default function NiveauSonore() {
         </div>
 
         <div className="text-sm text-gray-700">
-          Niveau sélectionné : <strong>{niveau}</strong>
+          Selected level : <strong>{niveau}</strong>
         </div>
 
         <button
           onClick={handleSubmit}
           className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full transition mt-4"
         >
-          Je valide
+          Confirm
         </button>
       </div>
     </div>

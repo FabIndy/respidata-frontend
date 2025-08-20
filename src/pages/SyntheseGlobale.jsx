@@ -131,7 +131,7 @@ export default function SyntheseGlobale() {
         className="bg-[#14b8a6] text-white px-6 py-2 rounded-full hover:bg-teal-700 transition"
         onClick={() => navigate('/respibot')}
       >
-        Interroger RespiBot
+        Ask RespiBot
       </button>
     </div>
   );

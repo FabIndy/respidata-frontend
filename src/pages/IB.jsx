@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 
 
@@ -19,7 +20,7 @@ export default function IB() {
     const bruit = localStorage.getItem("noise") || 5;
 
     if (!ville) {
-      alert("Ville non définie. Veuillez recommencer.");
+      alert("No city selected. Please try again.");
       navigate('/ville');
       return;
     }
@@ -28,7 +29,7 @@ export default function IB() {
       try {
         const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?city=${ville}&format=json`);
         const geoData = await geoRes.json();
-        if (!geoData.length) throw new Error("Ville introuvable");
+        if (!geoData.length) throw new Error("City not found");
 
         const lat = geoData[0].lat;
         const lon = geoData[0].lon;
@@ -40,7 +41,7 @@ export default function IB() {
 
 
         const response = await fetch(
-          `http://localhost:8000/calculate_ib?lat=${lat}&lon=${lon}&noise_level=${bruit}&profile=${profil}`
+          `${API_BASE}/calculate_ib?lat=${lat}&lon=${lon}&noise_level=${bruit}&profile=${profil}`
         );
 
         if (!response.ok) throw new Error("Erreur lors de l'appel à l'API backend");
@@ -91,7 +92,7 @@ export default function IB() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gradient-to-br from-white to-gray-50">
       <h1 className="text-3xl font-semibold text-gray-800 mb-8 tracking-tight">
-        Votre Indice de Bien-Être
+        Your Well-Being Score
       </h1>
 
       {loading ? (
@@ -106,14 +107,14 @@ export default function IB() {
           </span>
         </div>
       ) : (
-        <p className="text-red-500 mb-8">Impossible d’afficher l’indice. Veuillez réessayer.</p>
+        <p className="text-red-500 mb-8">Index unavailable. Please try again.</p>
       )}
 
       <button
         onClick={handleNavigateSousScores}
         className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-2 rounded-full transition duration-300 shadow"
       >
-        Voir les sous-scores
+        View detailed scores
       </button>
     </div>
   );

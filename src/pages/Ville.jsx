@@ -50,12 +50,12 @@ export default function Ville() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-white text-center">
-      <h1 className="text-2xl font-bold text-gray-800 mb-2">Indiquez votre ville</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-2">Enter your city</h1>
       <p className="text-gray-500 mb-6">
-        Par défaut, la ville sera celle de votre position.
+        By default, your current location will be used as the city.
       </p>
       {autoDetecting && (
-        <p className="text-sm text-gray-400 italic mb-2">Détection automatique en cours...</p>
+        <p className="text-sm text-gray-400 italic mb-2">Detecting location…</p>
       )}
       <input
         type="text"
@@ -69,7 +69,7 @@ export default function Ville() {
         className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full transition"
         disabled={!ville}
       >
-        Je valide
+        Confirm
       </button>
     </div>
   );

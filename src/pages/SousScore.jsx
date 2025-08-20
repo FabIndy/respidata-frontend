@@ -17,13 +17,13 @@ export default function SousScore() {
   const bruit = state.bruit || localStorage.getItem("bruit");
 
   const labels = {
-    temp: "Température",
+    temp: "Temperature",
     pollution: "Pollution",
-    pressure: "Pression",
-    humidity: "Humidité",
-    bruit: "Bruit",
-    sun: "Lumière",
-    wind: "Vent",
+    pressure: "Pressure",
+    humidity: "Humidity",
+    bruit: "Noise",
+    sun: "Sun",
+    wind: "Wind",
     uv: "UV"
   };
 
@@ -111,7 +111,7 @@ export default function SousScore() {
         })}
         className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-2 rounded-full transition duration-300"
       >
-        Voir les recommandations
+        View recommendations
       </button>
     </div>
   );
