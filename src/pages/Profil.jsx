@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 export default function Profil() {
   const navigate = useNavigate();
   const profils = [
-    "Standard",
-    "Standard with Asthma",
-    "Active",
-    "Active with Asthma"
+    "standard",
+    "standard with asthma",
+    "active",
+    "active with asthma"
   ];
 
   const [profil, setProfil] = useState(localStorage.getItem("profil") || "");
@@ -15,12 +15,12 @@ export default function Profil() {
   const handleSubmit = () => {
     if (profil) {
       const profilsValidés = [
-        "Standard",
-        "Standard with Asthma",
-        "Active",
-        "Active with Asthma"
+        "standard",
+        "standard with asthma",
+        "active",
+        "active with asthma"
       ];
-      const profilFinal = profilsValidés.includes(profil) ? profil : "Standard";
+      const profilFinal = profilsValidés.includes(profil) ? profil : "standard";
       localStorage.setItem("profil", profilFinal);
       navigate('/niveau_sonore');
     }
