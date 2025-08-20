@@ -77,7 +77,7 @@ export default function SousScore() {
           <thead>
             <tr>
               <th className="text-left pb-2">Measurement</th>
-              <th className="text-right pb-2">Valeur</th>
+              <th className="text-right pb-2">Value</th>
               <th className="text-right pb-2">Score</th>
             </tr>
           </thead>
