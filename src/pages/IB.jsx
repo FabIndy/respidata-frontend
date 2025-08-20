@@ -16,7 +16,7 @@ export default function IB() {
 
   useEffect(() => {
     const ville = localStorage.getItem("ville");
-    const profil = localStorage.getItem("profil") || "Standard";
+    const profil = localStorage.getItem("profil") || "standard";
     const bruit = localStorage.getItem("noise") || 5;
 
     if (!ville) {
