@@ -56,7 +56,7 @@ export default function Recommandations() {
   }, [location.state]);
 
   if (loading) {
-    return <div className="p-8 text-center text-gray-600">Chargement en cours...</div>;
+    return <div className="p-8 text-center text-gray-600">Loading...</div>;
   }
 
   if (error) {

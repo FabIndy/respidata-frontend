@@ -28,7 +28,7 @@ export default function Profil() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gradient-to-br from-white to-gray-100">
-      <h1 className="text-3xl font-semibold text-gray-800 mb-6">Quel est votre profil ?</h1>
+      <h1 className="text-3xl font-semibold text-gray-800 mb-6">Please select your profile</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md mb-8">
         {profils.map((p) => (

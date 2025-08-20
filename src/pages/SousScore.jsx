@@ -71,12 +71,12 @@ export default function SousScore() {
 
   return (
     <div className="min-h-screen bg-white px-4 flex flex-col items-center justify-center">
-      <h1 className="text-2xl font-semibold text-gray-800 mb-6">Détail des scores</h1>
+      <h1 className="text-2xl font-semibold text-gray-800 mb-6">Score Breakdown</h1>
       <div className="bg-gray-100 rounded-xl p-6 shadow-md max-w-2xl w-full mb-6">
         <table className="w-full text-gray-700">
           <thead>
             <tr>
-              <th className="text-left pb-2">Mesure</th>
+              <th className="text-left pb-2">Measurement</th>
               <th className="text-right pb-2">Valeur</th>
               <th className="text-right pb-2">Score</th>
             </tr>
@@ -92,7 +92,7 @@ export default function SousScore() {
           </tbody>
         </table>
         <div className="mt-6 text-right font-semibold">
-          IB Global : {ibScore ? `${Math.round(parseFloat(ibScore))} %` : "—"}
+          Global Well-being Score : {ibScore ? `${Math.round(parseFloat(ibScore))} %` : "—"}
         </div>
       </div>
       <div className="w-full max-w-2xl h-72 mb-6">

@@ -96,7 +96,7 @@ export default function IB() {
       </h1>
 
       {loading ? (
-        <p className="text-gray-500 mb-8">Calcul en cours...</p>
+        <p className="text-gray-500 mb-8">Processing...</p>
       ) : ibScore !== null ? (
         <div
           className={`w-48 h-48 flex items-center justify-center rounded-full transition-all duration-500 mb-8`}
