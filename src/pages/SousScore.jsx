@@ -70,7 +70,7 @@ export default function SousScore() {
   }));
 
   return (
-    <div className="min-h-screen bg-white px-4 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-white px-4 flex flex-col items-center justify-start">
       <h1 className="text-2xl font-semibold text-gray-800 mb-6">Score Breakdown</h1>
       <div className="bg-gray-100 rounded-xl p-6 shadow-md max-w-2xl w-full mb-6">
         <table className="w-full text-gray-700">
