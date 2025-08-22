@@ -95,7 +95,7 @@ export default function SousScore() {
           Global Well-being Score : {ibScore ? `${Math.round(parseFloat(ibScore))} %` : "—"}
         </div>
       </div>
-      <div className="w-full max-w-2xl h-72 mb-6">
+      <div className="w-full max-w-2xl h-72 mb-3">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={radarData}>
             <PolarGrid />
